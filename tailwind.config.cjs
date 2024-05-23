@@ -27,6 +27,8 @@ module.exports = {
                 },
 
                 overlay: '#BE5206',
+                badge: '#53330D',
+                badge_shadow: '#F5F0E6',
                 menukort: '#D9DE98',
                 formular: '#FAF7F3',
                 formular_felter: '#',
@@ -102,9 +104,6 @@ module.exports = {
                     pressed: '#53330D',
                 },
               },
-
-              badge: '#E2E6B0',
-              
             },
             spacing: {
               mobile: {
