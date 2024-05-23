@@ -1,4 +1,17 @@
 ---
+import '../styles/tailwind.css';
+import 'animate.css';
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
 ---
-<div>
-</div>
+<header>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="/">Forside</a></li>
+                <li><a class={currentPath === "menu" ? "active" : ""} href="/menu">Menu</a></li>
+                <li><a href="/om">Om Kayak Bar</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
