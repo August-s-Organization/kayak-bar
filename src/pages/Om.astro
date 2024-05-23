@@ -1,0 +1,28 @@
+---
+import '../styles/tailwind.css';
+import 'animate.css';
+import Header from "../components/Header.astro";
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{Astro.props.title}</title>
+	</head>
+	<body>
+
+		<header class="max-w-5xl mx-auto px-4">
+		</header>
+		
+		<main class="">
+			<slot />
+            
+		</main>
+
+		<footer class="max-w-5xl mx-auto px-4">
+		</footer>
+			
+	</body>
+</html>
