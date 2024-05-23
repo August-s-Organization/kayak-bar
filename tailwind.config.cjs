@@ -10,7 +10,7 @@ module.exports = {
     theme: {
         extend: {
           fontFamily: {
-            'sans': ['Londrina Solid', 'Staatliches', 'sans-serif'],
+            'sans': ['Londrina Solid', 'Staatliches', 'Fira Sans', 'sans-serif'],
           },
           colors: {
               surface: {
