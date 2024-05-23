@@ -9,7 +9,11 @@ module.exports = {
     ],
     theme: {
         extend: {
-            colors: {
+          fontFamily: {
+            'sans': ['Londrina Solid, Staatliches, sans-serif'],
+            'body'
+          },
+          colors: {
               surface: {
                 primary: {
                     default: '#F2ECE0',
