@@ -1,24 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-    plugins: [
-        require('@tailwindcss/typography'),
-        require('@tailwindcss/forms'),
-        require('@tailwindcss/aspect-ratio'),
-        require('@tailwindcss/container-queries'),
-    ],
-    theme: {
-        extend: {
-          fontFamily: {
-            'sans': ['Londrina Solid', 'Staatliches', 'sans-serif'],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["Londrina Solid", "Staatliches", "sans-serif"],
+      },
+      colors: {
+        surface: {
+          primary: {
+            default: "#F2ECE0",
+            hover: "#F5F0E6",
+            pressed: "#C2BDB3",
           },
-          colors: {
-              surface: {
-                primary: {
-                    default: '#F2ECE0',
-                    hover: '#F5F0E6',
-                    pressed: '#C2BDB3',
-                },
 
           highlight: {
             default: "#E2E6B0",
@@ -76,6 +71,13 @@ module.exports = {
         knap: {
           primary: {
             default: "#EE6607",
+            hover: "#F18539",
+            pressed: "#BE5206",
+            disabled: "#F5A36A",
+          },
+
+          secondary: {
+            default: "#F0890F",
             hover: "#F3A13F",
             pressed: "#C06E0C",
             disabled: "#F6B86F",
