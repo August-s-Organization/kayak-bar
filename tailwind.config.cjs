@@ -111,13 +111,13 @@ module.exports = {
             pressed: "#2B3A06",
           },
 
-                some: {
-                    default: '#684010',
-                    hover: '#866640',
-                    pressed: '#53330D',
-                },
-              },
-
+          some: {
+            default: '#684010',
+            hover: '#866640',
+            pressed: '#53330D',
+        },
+      },
+      
         shadow: {
           card: {
             default: '#E2E6B0',
