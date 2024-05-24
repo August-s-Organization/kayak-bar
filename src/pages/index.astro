@@ -2,12 +2,13 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Navigationscard from "../components/Navigationscard.astro"
+import Link from "../components/Link.astro";
 ---
 <MainLayout title="Kayak Bar">
       <section>
         <article>
             <div>
-                <img src="header-index.png" alt="">
+                <img src="header-index.png" alt="Velkommen til Kayak Bar">
             </div>
         </article>
     </section>
@@ -20,6 +21,7 @@ import Navigationscard from "../components/Navigationscard.astro"
             <p>Fra koncerter og udstillinger til pladereleases, firmaarrangementer og festlige bryllupper - vi har det hele!</p>
         </div>
         </article>
+        <Button variant="secondary" size="medium" class="">Læs mere om Kayak Bar!</Button>
         <img src="velkommen_index.png" alt="Stemningen på Kayak Bar">
     </section>
     <section>
@@ -30,6 +32,7 @@ import Navigationscard from "../components/Navigationscard.astro"
             <p>Vores lokaler, der ligger ved vandkanten, skaber den perfekte kulisse med palmer og flydende pontoner tæt på kajakvendet.</p>
             <p>Book dit bord på Kayak Bar nu!</p>
             </div>
+            <Button variant="secondary" size="large" class="">Book bord!</Button>
         </article>
     </section>
     <section>
@@ -39,6 +42,7 @@ import Navigationscard from "../components/Navigationscard.astro"
             <p>Kayak Bar er et uformelt spisested, og vores menu er alsidig med alt fra Moules Frites til lækre skaldyrs- og kødretter samt vegetariske valgmuligheder og søde desserter.</p>
             <p>Tjek vores menukort her!</p>
             </div>
+            <Button variant="secondary" size="medium" class="">Se menuen her!</Button>
         </article>
         <img src="mad1_index.png" alt="Salat">
         <img src="mad2_index.png" alt="Drinks">
