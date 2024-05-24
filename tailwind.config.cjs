@@ -26,13 +26,15 @@ module.exports = {
             pressed: "#C8CF6A",
           },
 
-          overlay: "#BE5206",
-          menukort: "#D9DE98",
-          formular: "#FAF7F3",
-          formular_felter: "#",
-          formular_knap: "#FCE7CF",
-          footer: "#C3E6FF",
-        },
+                overlay: '#BE5206',
+                badge: '#53330D',
+                badge_shadow: '#F5F0E6',
+                menukort: '#D9DE98',
+                formular: '#FAF7F3',
+                formular_felter: '#',
+                formular_knap: '#FCE7CF',
+                footer: '#C3E6FF',
+              },
 
         tekst: {
           primary: {
@@ -103,31 +105,32 @@ module.exports = {
             pressed: "#2B3A06",
           },
 
-          some: {
-            default: "#684010",
-            hover: "#866640",
-            pressed: "#53330D",
-          },
-        },
+                some: {
+                    default: '#684010',
+                    hover: '#866640',
+                    pressed: '#53330D',
+                },
+              },
 
-        badge: "#E2E6B0",
-      },
-      spacing: {
-        mobile: {
-          h1_bottom: {
-            index: "1.75rem",
-            other: "3rem",
-          },
-
-          h2_bottom: "1.25rem",
-          h3_bottom: "1rem",
-          h4_bottom: "0.875rem",
-          gap: "2.25rem",
-          card_bottom: "3rem",
-          button_top: "3rem",
-          button_gap: "1rem",
-          furniture_margin: "6rem",
-        },
+              badge: '#E2E6B0',
+              
+            },
+            spacing: {
+              mobile: {
+                h1_bottom: {
+                  index: '1.75rem',
+                  other: '3rem',
+                },
+                
+                h2_bottom: '1.25rem',
+                h3_bottom: '1rem',
+                h4_bottom: '0.875rem',
+                gap: '2.25rem',
+                card_bottom: '3rem',
+                button_top: '3rem',
+                button_gap: '1rem',
+                furniture_margin: '6rem',
+              },
 
         desktop: {
           h1_bottom: {
