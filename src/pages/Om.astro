@@ -4,23 +4,28 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout title="Kayak Bar">
     <main>
-        <div class="relative">
-            <h1 class="absolute bottom-0 left-0 mb-4 ml-10 text-white text-5xl">Om Kayak bar</h1>
-            <img class="w-full" src="om_mobil.png" alt="">
+        <div class="relative h-screen lg:h-96 overflow-hidden">
+            <h1 class="absolute bottom-0 left-0 mb-4 ml-10 text-white text-3xl md:text-5xl">Om Kayak bar</h1>
+            <img class="w-full h-full object-cover" src="om_mobil.png" alt="">
         </div>
         <div class="px-8 relative">
-            <p class="text-primary-default md:w-5/12 lg:w-4/12">
+            <p class="text-primary-default md:w-5/12 lg:w-5/12 ">
                 Vi ønsker at gøre en forskel for København, vi bidrager til det Københavnske kulturliv og vi er et sted med plads til forskelligheder. Vi tænker på miljøet, har fokus på bæredygtighed og passer på Københavns fantastiske havn. Vi opfordrer alle der booker en kajak at samle affald op fra havnen.
                 Velkommen til Kayak Bar – hvor historie, vand og kultur forenes på smukkeste vis.
             </p>
 
             <div>
-                <img class="py-16" src="om_2.png" alt="">
+				<div class="flex justify-end ">
+					<img class="py-16 lg:pr-28 lg:w-5/12" src="om_2.png" alt="">
+				</div>
                 <h2 class="text-primary-default">Ambition</h2>
-                <p>Ambitionen med stedet er at skabe et rum, hvor mennesker samles og mødes på tværs af ambitioner, drømme, overbevisninger, job og civilstand. </p>
-                <p>Mennesker i alle aldre og med forskellige baggrunde samles på Kayak Bar – til koncerter, firmafrokosten, den uformelle fyraftensøl, eller noget helt andet. Her finder du altid en tilbagelænet- og god stemning. </p>
-                <p>Vores stamkunder arbejder på Christiansborg, står i lære som blikkenslager eller langt hjemmefra som turist i København, og vi elsker det.</p>
-            </div>
+				<div class="gap-4">
+					  <p class="lg:w-5/12 ">Ambitionen med stedet er at skabe et rum, hvor mennesker samles og mødes på tværs af ambitioner, drømme, overbevisninger, job og civilstand. </p>
+                	<p class="lg:w-5/12">Mennesker i alle aldre og med forskellige baggrunde samles på Kayak Bar – til koncerter, firmafrokosten, den uformelle fyraftensøl, eller noget helt andet. Her finder du altid en tilbagelænet- og god stemning. </p>
+                	<p class="lg:w-5/12">Vores stamkunder arbejder på Christiansborg, står i lære som blikkenslager eller langt hjemmefra som turist i København, og vi elsker det.</p>
+           
+				</div>
+ </div>
 
             <img class="py-20 px-8" src="line.svg" alt="">
             <div class="relative">
@@ -30,9 +35,9 @@ import MainLayout from "../layouts/MainLayout.astro";
                 </div>
                 <div class="relative z-10">
                     <h2>Fællesskab</h2>
-                    <p>Vi har fokus på genbrug og bæredygtighed og vores omgivelser bærer præg af det: Kayak Bar er et rustikt og skævt sted med bænke bygget af europaller og andre lidt pudsige møbler.</p>
-                    <p>Når der er tryk på – og det er der heldigvis rigtig tit – beder vi jer derfor om at give en hånd med. For eksempel ved, at du som restaurantgæst selv henter din mad, når den er klar. </p>
-                    <p>Og frem for alt: Pas godt på vandet! Sørg for at cigaretskodder og andet affald havner i askebægere og skraldespande og ikke i vores smukke kanal – så er det rarere for os alle sammen at være her.</p>
+                    <p class="lg:w-5/12">Vi har fokus på genbrug og bæredygtighed og vores omgivelser bærer præg af det: Kayak Bar er et rustikt og skævt sted med bænke bygget af europaller og andre lidt pudsige møbler.</p>
+                    <p class="lg:w-5/12">Når der er tryk på – og det er der heldigvis rigtig tit – beder vi jer derfor om at give en hånd med. For eksempel ved, at du som restaurantgæst selv henter din mad, når den er klar. </p>
+                    <p class="lg:w-5/12">Og frem for alt: Pas godt på vandet! Sørg for at cigaretskodder og andet affald havner i askebægere og skraldespande og ikke i vores smukke kanal – så er det rarere for os alle sammen at være her.</p>
                 </div>
             </div>
             <img class="py-20 px-8" src="line.svg" alt="">
