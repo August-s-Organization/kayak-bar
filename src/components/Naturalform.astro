@@ -4,15 +4,15 @@ import Button from "../components/Button.astro";
 
 ---
 
-<form method="get" target="_blank" class=" mx-auto py-6 px-8 w-10/12 lg:w-8/12 lg:px-52 lg:py-16 bg-surface-formular mt-10">
+<form method="get" target="_blank" class=" mx-auto py-6 px-8 w-10/12 lg:w-8/12 lg:px-48 lg:py-16 bg-surface-formular mt-10">
   <p class="text-tekst-tertiary-darker">
     Hej, mit navn er 
-    <label class="relative mx-1 bg-tekst-tertiary-darker/10 py-1">
-      <input type="text" id="name-input" name="name" placeholder="dit navn" class="input text w-32  mx-1 bg-transparent border-none"/>
+    <label class="relative mx-1 bg-tekst-tertiary-darker/10 py-1 lg:py-2">
+      <input type="text" id="name-input" name="name" placeholder="dit navn" class="input text w-32 lg:w-44 mx-1 bg-transparent border-none"/>
       <span class="absolute bottom-0 left-0 right-0 h-1 bg-tekst-tertiary-darker opacity-70"></span>
     </label>
     og min henvendelse drejer sig om
-    <select id="topic-input" name="topic" class="input text w-36 bg-tekst-tertiary-darker/10 py-1 mx-1 border-none">
+    <select id="topic-input" name="topic" class="input text w-48 bg-tekst-tertiary-darker/10 py-1  mx-1 border-none">
       <option value="" disabled selected>Vælg emnet</option>
       <option value="Selskab">Selskab</option>
       <option value="Møde">Møde</option>
@@ -21,14 +21,15 @@ import Button from "../components/Button.astro";
       <option value="Kajak">Kajak</option>
     </select>
     . Skriv til mig på mailen 
-    <label class="relative mx-1 bg-tekst-tertiary-darker/10 py-1">
-      <input type="text" id="email-input" name="email" placeholder="din email" class="input text w-32 bg-transparent border-none"/>
+    <label class="relative mx-1 bg-tekst-tertiary-darker/10 py-1 lg:py-2">
+      <input type="text" id="email-input" name="email" placeholder="din email" class="input text w-32 lg:w-44 bg-transparent border-none"/>
       <span class="absolute bottom-0 left-0 right-0 h-1 bg-tekst-tertiary-darker opacity-70"></span>
     </label>
+  
     ,
     eller ring til mig på nr. 
-    <label class="relative mx-1 bg-tekst-tertiary-darker/10 py-1">
-      <input type="text" id="phone-input" name="phone" placeholder="dit telefonnummer" class="input text w-32 bg-transparent border-none"/>
+    <label class="relative mx-1 bg-tekst-tertiary-darker/10 py-1 lg:py-2">
+      <input type="text" id="phone-input" name="phone" placeholder="dit telefonnummer" class="input text w-32 lg:w-44 bg-transparent border-none"/>
       <span class="absolute bottom-0 left-0 right-0 h-1 bg-tekst-tertiary-darker opacity-70"></span>
     </label>
     .
