@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "cardoverskrift": "Events",
+    "cardbillede": "events.png",
+    "cardbilledealt": "Events",
+    "cardbeskrivelse": "Der afholdes ofte forskellige events på Kayak Bar!"
+  },
+  {
+    "id": 2,
+    "cardoverskrift": "Selskaber",
+    "cardbillede": "selskaber.png",
+    "cardbilledealt": "Selskaber",
+    "cardbeskrivelse": "Book Kayak Bar til dit næste selskab!"
+  },
+  {
+    "id": 3,
+    "cardoverskrift": "Kajak",
+    "cardbillede": "kajak.png",
+    "cardbilledealt": "Kajak",
+    "cardbeskrivelse": "Hvis I vil udforske Københavns kanaler tilbyder vi kajakudlejning!"
+  },
+  {
+    "id": 4,
+    "cardoverskrift": "Firma",
+    "cardbillede": "firma.png",
+    "cardbilledealt": "Firma",
+    "cardbeskrivelse": "Kayak Bar kan bookes til firmaevents og tilbyder skræddersyede oplevelser for jeres team!"
+  }
+]
