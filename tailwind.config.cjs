@@ -20,15 +20,19 @@ module.exports = {
                     pressed: '#C2BDB3',
                 },
 
-          highlight: {
-            default: "#E2E6B0",
-            hover: "#D9DE98",
-            pressed: "#C8CF6A",
-          },
+                secondary: {
+                  default: '#684010',
+                },
+
+                highlight: {
+                  default: "#E2E6B0",
+                  hover: "#D9DE98",
+                  pressed: "#C8CF6A",
+                },
 
                 overlay: '#BE5206',
-                badge: '#53330D',
-                badge_shadow: '#F5F0E6',
+                badge: '#4D6C40',
+                badge_shadow: '#2B3A06',
                 menukort: '#D9DE98',
                 formular: '#FAF7F3',
                 formular_felter: '#',
@@ -46,7 +50,7 @@ module.exports = {
 
           secondary: {
             default: "#F7F4EC",
-            darker: "#F5F0E6",
+            darker: "#F2ECE0",
           },
 
           tertiary: {
@@ -57,7 +61,9 @@ module.exports = {
           },
 
           accent: {
-            default: "#EE6607",
+            lighter: "#EE6607",
+            default: "#F18539",
+            darker: "#BE5206",
             disabled: "#F8C29C",
           },
         },
@@ -112,25 +118,30 @@ module.exports = {
                 },
               },
 
-              badge: '#E2E6B0',
-              
-            },
-            spacing: {
-              mobile: {
-                h1_bottom: {
-                  index: '1.75rem',
-                  other: '3rem',
-                },
-                
-                h2_bottom: '1.25rem',
-                h3_bottom: '1rem',
-                h4_bottom: '0.875rem',
-                gap: '2.25rem',
-                card_bottom: '3rem',
-                button_top: '3rem',
-                button_gap: '1rem',
-                furniture_margin: '6rem',
-              },
+        shadow: {
+          card: {
+            default: '#E2E6B0',
+            hover: '#D9DE98',
+            pressed: '#C8CF6A',
+          },
+        }, 
+      },
+      spacing: {
+        mobile: {
+          h1_bottom: {
+            index: '1.75rem',
+            other: '3rem',
+          },
+          
+          h2_bottom: '1.25rem',
+          h3_bottom: '1rem',
+          h4_bottom: '0.875rem',
+          gap: '2.25rem',
+          card_bottom: '3rem',
+          button_top: '3rem',
+          button_gap: '1rem',
+          furniture_margin: '6rem',
+        },
 
         desktop: {
           h1_bottom: {
