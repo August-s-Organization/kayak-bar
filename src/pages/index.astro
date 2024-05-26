@@ -79,8 +79,8 @@ import Footer from "../components/Footer.astro"
   </div>
         <img class="py-20 px-8 lg:px-64 lg:py-40" src="line.svg" alt="">
     </section>
-     <section id="cardsection">
-        <article>
+     <section>
+        <article id="cardsection">
             <h2 class="text-tekst-primary-default text-6xl lg:text-8xl mb-3">Vi tilbyder også</h2>
             <div class="text-tekst-primary-darker md:w-5/12 lg:w-5/12 lg:pt-10">
             <p class="mb-4">Vores mission er at skabe et rum, hvor mennesker samles på tværs af ambitioner, drømme, overbevisninger, job og civilstand.</p>
@@ -88,15 +88,16 @@ import Footer from "../components/Footer.astro"
             <p class="mb-4">Udforsk de forskellige muligheder nedenfor, og planlæg et besøg skræddersyet præcis efter jeres behov!</p>
             </div>
         </article>
+        <div id="cards">
 <Navigationscard></Navigationscard>
+</div>
 </section>
 </div>
 </main>
 </MainLayout>
 <Footer></Footer>
 <script>
-    import { inView } from "motion";
-	
+import { inView } from "motion";
    const logofadein = document.querySelector("#logo");
 	inView(logofadein, () => {
 		logofadein.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0.5s");
@@ -122,4 +123,8 @@ import Footer from "../components/Footer.astro"
 		cardsectionfadein.classList.add("animate__animated", "animate__fadeIn", "animate_delay-1s");
 	});	
 
+     const cardsbounce = document.querySelector("#cards");
+	inView(cardsbounce, () => {
+		cardsbounce.classList.add("animate__animated", "animate__bounceInRight", "animate__delay-0.5s");
+	});	
 </script>
