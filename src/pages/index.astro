@@ -4,16 +4,18 @@ import Button from "../components/Button.astro";
 import Navigationscard from "../components/Navigationscard.astro"
 import Link from "../components/Link.astro";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro"
 ---
 <Header></Header>
 <section>
     <article>
-        <div class="">
             <!-- Mobil version -->
             <img src="header-index-mobil.png" alt="Velkommen til Kayak Bar" class="block lg:hidden">
-            <img src="hero_logo_mobil.svg" alt="Kayak Bar Logo Mobil" class="block lg:hidden  mt-[-30rem] ml-[3rem]">
             <!-- Desktop version -->
             <img src="header-index.png" alt="Velkommen til Kayak Bar" class="hidden lg:block">
+            <!-- Logo -->
+            <div id="logo">
+            <img src="hero_logo_mobil.svg" alt="Kayak Bar Logo Mobil" class="block lg:hidden  mt-[-30rem] ml-[3rem]">
            <img src="hero_logo_desktop.svg" alt="Kayak Bar Logo Desktop" class="hidden lg:block absolute lg:mt-[-24rem] lg:ml-[3rem]">
         </div>
         <div class="grid gap-4 pl-11 absolute mt-[1rem] lg:mt-[-19rem] lg:ml-[60rem]">
@@ -25,7 +27,7 @@ import Header from "../components/Header.astro";
 <MainLayout title="Kayak Bar">
     <main>
     <div class="px-8 relative lg:pl-44">
-    <section>
+    <section id="velkommen">
         <div class="">
         <article class="mt-[18rem] lg:mt-10">
             <h1 class="text-tekst-primary-default text-6xl md:text-5xl lg:text-8xl md:w-5/12 lg:w-5/12 lg:pt-10 mb-3">Velkommen til Kayak Bar!</h1>
@@ -36,11 +38,11 @@ import Header from "../components/Header.astro";
         </div>
           <Link variant="secondary" size="medium" href="/om" class="">Læs mere om Kayak Bar!</Link>
         </article>
-        <img src="velkommen_index.png" alt="Stemningen på Kayak Bar" class="mt-10 lg:mt-[-30rem] lg:ml-[40rem]">
+        <img src="velkommen_index.png" alt="Stemningen på Kayak Bar" class="billede mt-10 lg:mt-[-30rem] lg:ml-[40rem]">
         </div>
     </section>
      <img class="py-20 px-8 lg:px-64 lg:py-40" src="line.svg" alt="">
-    <section>
+    <section id="booking">
         <article>
             <h2 class="text-tekst-primary-default text-6xl lg:text-8xl mb-3">Vi ses på Kayak Bar!</h2>
             <div class="text-tekst-primary-darker md:w-5/12 lg:w-5/12 lg:pt-10 lg:mb-20">
@@ -50,9 +52,9 @@ import Header from "../components/Header.astro";
             </div>
             <Link variant="secondary" size="large" href="/bookingformular1" class="">Book bord!</Link>
         </article>
-        <img class="py-20 px-8 lg:px-64 lg:py-40" src="line.svg" alt="">
     </section>
-    <section>
+    <img class="py-20 px-8 lg:px-64 lg:py-40" src="line.svg" alt="">
+    <section id="menu">
         <article>
             <h2 class="text-tekst-primary-default text-6xl lg:text-8xl mb-3">Vores menu</h2>
             <div class="text-tekst-primary-darker md:w-5/12 lg:w-5/12 lg:pt-10">
@@ -62,6 +64,7 @@ import Header from "../components/Header.astro";
             </div>
             
         </article>
+    <div id="">
   <div class="w-full lg:max-w-[750px] mx-auto lg:-mt-16">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       <div class="lg:flex lg:items-center">
@@ -73,9 +76,10 @@ import Header from "../components/Header.astro";
       </div>
     </div>
   </div>
+  </div>
         <img class="py-20 px-8 lg:px-64 lg:py-40" src="line.svg" alt="">
     </section>
-     <section>
+     <section id="cardsection">
         <article>
             <h2 class="text-tekst-primary-default text-6xl lg:text-8xl mb-3">Vi tilbyder også</h2>
             <div class="text-tekst-primary-darker md:w-5/12 lg:w-5/12 lg:pt-10">
@@ -89,3 +93,33 @@ import Header from "../components/Header.astro";
 </div>
 </main>
 </MainLayout>
+<Footer></Footer>
+<script>
+    import { inView } from "motion";
+	
+   const logofadein = document.querySelector("#logo");
+	inView(logofadein, () => {
+		logofadein.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0.5s");
+	});	
+   
+    const velkommenfadein = document.querySelector("#velkommen");
+	inView(velkommenfadein, () => {
+		velkommenfadein.classList.add("animate__animated", "animate__fadeIn", "animate__delay-1s");
+	});	
+    
+    const booking = document.querySelector("#booking");
+	inView(booking, () => {
+		booking.classList.add("animate__animated", "animate__bounceInLeft", "animate__delay-0.5s");
+	});	
+
+     const menufadein = document.querySelector("#menu");
+	inView(menufadein, () => {
+		menufadein.classList.add("animate__animated", "animate__fadeIn", "animate__delay-1s");
+	});	
+
+    const cardsectionfadein = document.querySelector("#cardsection");
+	inView(cardsectionfadein, () => {
+		cardsectionfadein.classList.add("animate__animated", "animate__fadeIn", "animate_delay-1s");
+	});	
+
+</script>
