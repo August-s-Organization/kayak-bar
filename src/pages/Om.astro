@@ -7,26 +7,30 @@ import  Naturalform from "../components/Naturalform.astro";
 <Header></Header>
 <MainLayout title="Kayak Bar">
     <main class="">
-        <div class="relative h-full lg:h-96 overflow-hidden lg:-mx-10">
+        <div class="relative h-full lg:h-96 overflow-hidden lg:-mx-10 ">
             <h1 class="absolute bottom-0 left-0 mb-4 ml-10 text-white text-6xl md:text-5xl lg:text-8xl lg:pl-44">Om Kayak bar</h1>
             <img class="w-full h-full  object-cover " src="om_mobil.png" alt="">
         </div>
         <div class="px-8 relative lg:pl-44">
-            <p class="text-tekst-primary-default md:w-5/12 lg:w-5/12 pt-6 lg:pt-10">
+			<div id="sticky-text1" class="sticky-text1">
+				<p class="text-tekst-primary-default md:w-5/12 lg:w-5/12 pt-6 lg:pt-10">
                 Vi ønsker at gøre en forskel for København, vi bidrager til det Københavnske kulturliv og vi er et sted med plads til forskelligheder. Vi tænker på miljøet, har fokus på bæredygtighed og passer på Københavns fantastiske havn. Vi opfordrer alle der booker en kajak at samle affald op fra havnen.
                 
             </p>
-			<p class="text-tekst-primary-default pt-6">
+			<p class="text-tekst-primary-default md:w-5/12 lg:w-5/12 pt-6 ">
 				Velkommen til Kayak Bar – hvor historie, vand og kultur forenes på smukkeste vis.
 			</p>
+			</div>
+
 
             <div class="">
-				<div class="flex justify-end ">
+				<div id="sticky-image" class="flex justify-end lg:pt-96 sticky-image">
 					<img class="py-28 lg:py-16 lg:pr-28 lg:w-5/12" src="om_2.png" alt="">
 				</div>
-                <h2 class="text-tekst-primary-default text-6xl lg:text-8xl">Ambition</h2>
-				<div class="text-tekst-primary-default">
-					  <p class="lg:w-5/12 pt-6">Ambitionen med stedet er at skabe et rum, hvor mennesker samles og mødes på tværs af ambitioner, drømme, overbevisninger, job og civilstand. </p>
+
+				<div class="text-tekst-primary-default sticky-text2 ">
+					<h2 class="text-tekst-primary-default text-6xl lg:text-8xl">Ambition</h2>
+					<p class="lg:w-5/12 pt-6">Ambitionen med stedet er at skabe et rum, hvor mennesker samles og mødes på tværs af ambitioner, drømme, overbevisninger, job og civilstand. </p>
                 	<p class="lg:w-5/12 pt-6">Mennesker i alle aldre og med forskellige baggrunde samles på Kayak Bar – til koncerter, firmafrokosten, den uformelle fyraftensøl, eller noget helt andet. Her finder du altid en tilbagelænet- og god stemning. </p>
                 	<p class="lg:w-5/12 pt-6">Vores stamkunder arbejder på Christiansborg, står i lære som blikkenslager eller langt hjemmefra som turist i København, og vi elsker det.</p>
            
@@ -35,7 +39,6 @@ import  Naturalform from "../components/Naturalform.astro";
 
             <img class="py-20 px-8 lg:px-64 lg:py-40" src="line.svg" alt="">
             <div class="relative">
-                <!-- Background Image as Div -->
                 <div class="absolute inset-0 -z-10">
                     <img class="w-full h-full object-cover" src="palmtree_1_mobil.svg" alt="">
                 </div>
@@ -59,3 +62,39 @@ import  Naturalform from "../components/Naturalform.astro";
 		</div>
     </main>
 </MainLayout>
+
+<style>
+    .sticky-image {
+        position: sticky;
+        top: -50%; /* Stick to the middle of the screen */
+        transform: translateY(-10%); /* Adjust to vertically center the element */
+        z-index: 10;
+    }
+
+    .sticky-text1 {
+        position: sticky;
+        top: 60%; /* Stick to the middle of the screen */
+        transform: translateY(-10%); /* Adjust to vertically center the element */
+        z-index: 10; /* Adjust z-index */
+    }
+</style>
+
+<script>
+    window.addEventListener('scroll', function() {
+        var stickyText1 = document.getElementById('sticky-text1');
+        var stickyImage = document.getElementById('sticky-image');
+        var scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+        // Calculate the top position of the sticky image
+        var imageTopPosition = stickyImage.getBoundingClientRect().top + scrollPosition;
+
+        // If the top of the sticky text1 reaches or surpasses the top of the sticky image,
+        // remove sticky behavior
+        if (scrollPosition >= imageTopPosition) {
+            stickyText1.style.position = 'static';
+        } else {
+            stickyText1.style.position = 'sticky';
+            stickyText1.style.top = '60%'; // Adjust top position as needed
+        }
+    });
+</script>
