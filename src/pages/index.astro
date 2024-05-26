@@ -16,9 +16,9 @@ import Header from "../components/Header.astro";
             <img src="header-index.png" alt="Velkommen til Kayak Bar" class="hidden lg:block">
            <img src="hero_logo_desktop.svg" alt="Kayak Bar Logo Desktop" class="hidden lg:block absolute lg:mt-[-24rem] lg:ml-[3rem]">
         </div>
-        <div class="grid gap-1 pl-11 absolute mt-[1rem] lg:mt-[-19rem] lg:ml-[60rem]">
-        <Button variant="secondary" size="medium" class="">Book bord her!</Button>
-        <Button variant="secondary" size="medium" class="">Se menuen her</Button>
+        <div class="grid gap-4 pl-11 absolute mt-[1rem] lg:mt-[-19rem] lg:ml-[60rem]">
+        <Link variant="secondary" size="medium" href="/bookingformular1" class="">Book bord her!</Link>
+        <Link variant="secondary" size="medium" href="/menu" class="">Se menuen her</Link>
         </div>
     </article>
 </section>
@@ -29,12 +29,12 @@ import Header from "../components/Header.astro";
         <div class="">
         <article class="mt-[18rem] lg:mt-10">
             <h1 class="text-tekst-primary-default text-6xl md:text-5xl lg:text-8xl md:w-5/12 lg:w-5/12 lg:pt-10 mb-3">Velkommen til Kayak Bar!</h1>
-            <div class="text-tekst-primary-darker md:w-5/12 lg:w-5/12 lg:pt-10 mb-10">
+            <div class="text-tekst-primary-darker md:w-5/12 lg:w-5/12 lg:pt-10 mb-10 lg:mb-16">
             <p class="mb-4">Kayak Bar er ikke bare en restaurant, café, bar og et spillested - det er også en vigtig del af den lokale kultur.</p>
             <p class="mb-4">Som skaberne bag det årlige "Lucia i Kajak" optog, er vi udover dette også værter for en række andre spændende begivenheder.</p>
             <p>Fra koncerter og udstillinger til pladereleases, firmaarrangementer og festlige bryllupper - vi har det hele!</p>
         </div>
-          <Button variant="secondary" size="medium" class="">Læs mere om Kayak Bar!</Button>
+          <Link variant="secondary" size="medium" href="/om" class="">Læs mere om Kayak Bar!</Link>
         </article>
         <img src="velkommen_index.png" alt="Stemningen på Kayak Bar" class="mt-10 lg:mt-[-30rem] lg:ml-[40rem]">
         </div>
@@ -43,12 +43,12 @@ import Header from "../components/Header.astro";
     <section>
         <article>
             <h2 class="text-tekst-primary-default text-6xl lg:text-8xl mb-3">Vi ses på Kayak Bar!</h2>
-            <div class="text-tekst-primary-darker md:w-5/12 lg:w-5/12 lg:pt-10">
+            <div class="text-tekst-primary-darker md:w-5/12 lg:w-5/12 lg:pt-10 lg:mb-20">
             <p class="mb-4">Vores unikke lokation, omgivet af fredede historiske omgivelser, tilfører en enestående personlighed, som skal opleves!</p>
             <p class="mb-4">Vores lokaler, der ligger ved vandkanten, skaber den perfekte kulisse med palmer og flydende pontoner tæt på kajakvendet.</p>
-            <p class="mb-8">Book dit bord på Kayak Bar nu!</p>
+            <p class="mb-12">Book dit bord på Kayak Bar nu!</p>
             </div>
-            <Button variant="secondary" size="large" class="">Book bord!</Button>
+            <Link variant="secondary" size="large" href="/bookingformular1" class="">Book bord!</Link>
         </article>
         <img class="py-20 px-8 lg:px-64 lg:py-40" src="line.svg" alt="">
     </section>
@@ -57,8 +57,8 @@ import Header from "../components/Header.astro";
             <h2 class="text-tekst-primary-default text-6xl lg:text-8xl mb-3">Vores menu</h2>
             <div class="text-tekst-primary-darker md:w-5/12 lg:w-5/12 lg:pt-10">
             <p class="mb-4">Kayak Bar er et uformelt spisested, og vores menu er alsidig med alt fra Moules Frites til lækre skaldyrs- og kødretter samt vegetariske valgmuligheder og søde desserter.</p>
-            <p class="mb-8">Tjek vores menukort her!</p>
-             <Button variant="secondary" size="medium" class="">Se menuen her!</Button>
+            <p class="mb-10 lg:mb-16">Tjek vores menukort her!</p>
+             <Link variant="secondary" size="medium" href="/menu" class="">Se menuen her!</Link>
             </div>
             
         </article>
