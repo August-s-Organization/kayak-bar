@@ -1,16 +1,16 @@
 ---
 ---
-<section x-data="{ allenavigationscards: []}" x-init="allenavigationscards = await (await fetch('navigationscard.json')).json(); allenavigationscards.reverse();" class="mb-10 mt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+<section x-data="{ allenavigationscards: []}" x-init="allenavigationscards = await (await fetch('navigationscard.json')).json(); allenavigationscards.reverse();" class="mb-10 mt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3">
   <template x-for="(navigationscard, index) in allenavigationscards.slice(0, 4)" :key="index">
-    <a href="#" class="flex justify-center gap-4 mb-1" :class="index % 2 === 0 ? 'mt-8 lg:mt-16' : ''">
-      <article class="max-w-450 max-h-600 bg-card-default hover:bg-card-hover rounded-lg overflow-hidden shadow-lg mb-10 min-w-200">
-        <img :src="navigationscard.cardbillede" :alt="navigationscard.cardbilledealt" class="object-cover h-72 w-full">
-        <section class="navigationscard mb-20 mt-8 px-8">
-          <h3 class="text-tekst-tertiary-default font-semibold mb-2" x-text="navigationscard.cardoverskrift"></h3>
-          <img src="card_streg.svg" alt="streg på card">
-          <p class="text-tekst-tertiary-darker mt-2" x-text="navigationscard.cardbeskrivelse"></p>
-          <h4 class="font-normal text-tekst-accent-default">Læs mere</h4>
-        </section>
+    <a href="#" class="flex gap-4" :class="index % 2 === 0 ? 'mt-8 lg:mt-16' : ''">
+      <article class="bg-card-default hover:bg-card-hover hover:shadow-surface-highlight-hover active:shadow-surface-highlight-pressed rounded-lg overflow-hidden shadow-lg mb-10 min-w-200 w-96 h-[32rem]">
+        <img :src="navigationscard.cardbillede" :alt="navigationscard.cardbilledealt" class="object-cover w-full h-56">
+        <article class="navigationscard h-auto flex flex-col justify-between px-8 py-6">
+          <h3 class="text-5xl lg:text-5xl text-tekst-tertiary-default font-semibold mb-2" x-text="navigationscard.cardoverskrift"></h3>
+          <img src="card_streg.svg" alt="streg på card" class="my-4">
+          <p class="text-lg text-tekst-tertiary-darker mb-4" x-text="navigationscard.cardbeskrivelse"></p>
+          <h4 class="text-xl lg:text-2xl font-normal text-tekst-accent-default">Læs mere</h4>
+        </article>
       </article>
     </a>
   </template>
