@@ -1,7 +1,35 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Link from "../components/Link.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
-
+<Header></Header>
 <MainLayout title="Book bord på Kayak Bar - Side 4, Klokkeslæt">
-    <h2 class="text-tekst-primary-default text-6xl lg:text-8xl mb-3 text-center">Book bord på Kayak Bar</h2>
+    <h2 class="text-tekst-primary-default text-6xl lg:text-8xl mb-10 mt-10 text-center">Book bord på Kayak Bar</h2>
+    <section class="bg-surface-formular mb-10 pb-5">
+            <div class="p-8">
+        <Link variant="primary" size="small" href="/bookingformular3" class="">Tilbage</Link>
+    </div>
+        <div class="grid place-items-center">
+        <img src="ikonerklokkemobil.svg" alt="klokkeslætikoner_mobil" class="block lg:hidden">
+        <img src="ikonerklokke.svg" alt="klokkeslætikoner_desktop" class="hidden lg:block">
+    </div>
+    <img class="py-5 px-8 lg:px-64 lg:py-30" src="line.svg" alt="">
+    <h3 class="text-4xl lg:text-5xl text-tekst-tertiary-default font-semibold text-center pb-10 mb-10">Vælg tidspunkt</h3>
+    <article class="bg-surface-primary-default grid grid-cols-2 lg:grid-cols-4 gap-8 mx-16 mb-10 lg:mb-16 p-10">
+<h4 class="text-3xl lg:text-4xl text-knap-primary-default hover:text-knap-primary-hover text-center" >17:00</h4>
+<h4 class="text-3xl lg:text-4xl text-knap-primary-disabled text-center">17:30</h4>
+<h4 class="text-3xl lg:text-4xl text-knap-primary-pressed underline underline-offset-8 text-center">18:00</h4>
+<h4 class="text-3xl lg:text-4xl text-knap-primary-disabled text-center">18:30</h4>
+<h4 class="text-3xl lg:text-4xl text-knap-primary-default hover:text-knap-primary-hover text-center">19:00</h4>
+<h4 class="text-3xl lg:text-4xl text-knap-primary-default hover:text-knap-primary-hover text-center">19:30</h4>
+<h4 class="text-3xl lg:text-4xl text-knap-primary-disabled text-center">20:00</h4>
+<h4 class="text-3xl lg:text-4xl text-knap-primary-disabled text-center">20:30</h4>
+</article>
+<div class="flex justify-center pb-10">
+<Link variant="secondary" size="medium" href="/bookingformular5" class="">Næste side</Link>
+</div>
+</section>
 </MainLayout>
+<Footer></Footer>

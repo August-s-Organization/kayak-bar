@@ -43,7 +43,7 @@ import Footer from "../components/Footer.astro"
     </section>
      <img class="py-20 px-8 lg:px-64 lg:py-40" src="line.svg" alt="">
     <section id="booking">
-        <article>
+        <article class="">
             <h2 class="text-tekst-primary-default text-6xl lg:text-8xl mb-3">Vi ses på Kayak Bar!</h2>
             <div class="text-tekst-primary-darker md:w-5/12 lg:w-5/12 lg:pt-10 lg:mb-20">
             <p class="mb-4">Vores unikke lokation, omgivet af fredede historiske omgivelser, tilfører en enestående personlighed, som skal opleves!</p>
@@ -108,9 +108,9 @@ import { inView } from "motion";
 		velkommenfadein.classList.add("animate__animated", "animate__fadeIn", "animate__delay-1s");
 	});	
     
-    const booking = document.querySelector("#booking");
-	inView(booking, () => {
-		booking.classList.add("animate__animated", "animate__bounceInLeft", "animate__delay-0.5s");
+    const bookingfadein = document.querySelector("#booking");
+	inView(bookingfadein, () => {
+		bookingfadein.classList.add("animate__animated", "animate__fadeIn", "animate__delay-1s");
 	});	
 
      const menufadein = document.querySelector("#menu");

@@ -1,7 +1,38 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Link from "../components/Link.astro";
 ---
 
 <MainLayout title="Book bord på Kayak Bar - Side 2, Tidspunkt">
-    <h2 class="text-tekst-primary-default text-6xl lg:text-8xl mb-3 text-center">Book bord på Kayak Bar</h2>
+    <h2 class="text-tekst-primary-default text-6xl lg:text-8xl mb-10 text-center mt-10">Book bord på Kayak Bar</h2>
+<section class="bg-surface-formular mb-10 pb-10">
+    <div class="p-8">
+        <Link variant="primary" size="small" href="/bookingformular1" class="">Tilbage</Link>
+    </div>
+    <div class="grid place-items-center">
+        <img src="ikonertidspunktmobil.svg" alt="tidspunktikoner_mobil" class="block lg:hidden">
+        <img src="ikonertidspunkt.svg" alt="tidspunktikoner_desktop" class="hidden lg:block">
+    </div>
+    <img class="py-5 px-8 lg:px-64 lg:py-30" src="line.svg" alt="">
+    <h3 class="text-4xl lg:text-5xl text-tekst-tertiary-default font-semibold text-center pb-10 mb-10">Vælg mellem</h3>
+    <div class="flex justify-center items-center">
+        <article class="grid grid-cols-1 lg:grid-cols-3 gap-16 items-center pb-20">
+            <div class="text-center mb-4 lg:mb-0">
+                <h4 class="text-3xl lg:text-4xl text-tekst-tertiary-darker mb-1">Morgen</h4>
+                <input type="radio" id="morgen" name="tidspunkt" value="morgen" class="form-radio text-knap-primary-default">
+            </div>
+            <div class="text-center mb-4 lg:mb-0">
+                <h4 class="text-3xl lg:text-4xl text-tekst-tertiary-darker mb-1">Frokost</h4>
+                <input type="radio" id="frokost" name="tidspunkt" value="frokost" class="form-radio text-knap-primary-default">
+            </div>
+            <div class="text-center mb-4 lg:mb-0">
+                <h4 class="text-3xl lg:text-4xl text-tekst-tertiary-darker mb-1">Aften</h4>
+                <input type="radio" id="aften" name="tidspunkt" value="aften" class="form-radio text-knap-primary-default">
+            </div>
+        </article>
+    </div>
+    <div class="flex justify-center pb-10">
+<Link variant="secondary" size="medium" href="/bookingformular3" class="">Næste side</Link>
+</div>
+</section>
 </MainLayout>
