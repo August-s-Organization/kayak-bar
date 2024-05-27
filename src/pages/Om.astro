@@ -79,3 +79,40 @@ import  Footer from "../components/Footer.astro";
 		</div>
     </main>
 </MainLayout>
+<Footer></Footer>
+
+<style>
+    .sticky-image {
+        position: sticky;
+        top: -50%; /* Stick to the middle of the screen */
+        transform: translateY(-10%); /* Adjust to vertically center the element */
+        z-index: 10;
+    }
+
+    .sticky-text1 {
+        position: sticky;
+        top: 60%; /* Stick to the middle of the screen */
+        transform: translateY(-10%); /* Adjust to vertically center the element */
+        z-index: 10; /* Adjust z-index */
+    }
+</style>
+
+<script>
+    window.addEventListener('scroll', function() {
+        var stickyText1 = document.getElementById('sticky-text1');
+        var stickyImage = document.getElementById('sticky-image');
+        var scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+        // Calculate the top position of the sticky image
+        var imageTopPosition = stickyImage.getBoundingClientRect().top + scrollPosition;
+
+        // If the top of the sticky text1 reaches or surpasses the top of the sticky image,
+        // remove sticky behavior
+        if (scrollPosition >= imageTopPosition) {
+            stickyText1.style.position = 'static';
+        } else {
+            stickyText1.style.position = 'sticky';
+            stickyText1.style.top = '60%'; // Adjust top position as needed
+        }
+    });
+</script>
