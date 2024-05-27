@@ -1,6 +1,30 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Link from "../components/Link.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
-
-<MainLayout title="Book bord på Kayak Bar - Side 1, Antal">
+<Header></Header>
+<MainLayout title="Book bord på Kayak Bar - Side 1, Antal gæster">
+    <h2 class="text-tekst-primary-default text-6xl lg:text-8xl mb-10 text-center mt-10">Book bord på Kayak Bar</h2>
+<section class="bg-surface-formular mb-10 pb-10">
+ <div class="p-8"></div>
+    <h3 class="text-4xl lg:text-5xl text-tekst-tertiary-default font-semibold text-center pb-10 mb-5">Vælg antal gæster</h3>
+    <article class="p-10">
+        <h4 class="text-3xl lg:text-4xl text-tekst-tertiary-darker text-center mb-10">Antal gæster</h4>
+    <div class="flex items-center justify-center space-x-4 mb-10">
+        <button class="bg-knap-primary-default hover:bg-knap-primary-hover text-surface-highlight-default font-bold py-2 px-4 rounded-full">
+            -
+        </button>
+        <input type="text" value="1" readonly class="w-16 text-center text-xl text-tekst-tertiary-darker border border-gray-300 rounded-lg focus:outline-none">
+        <button class="bg-knap-primary-default hover:bg-knap-primary-hover text-surface-highlight-default py-2 px-4 rounded-full">
+            +
+        </button>
+    </div>
+</article>
+    <div class="flex justify-center pb-10">
+<Link variant="secondary" size="medium" href="/bookingformular2" class="">Næste side</Link>
+</div>
+</section>
 </MainLayout>
+<Footer></Footer>

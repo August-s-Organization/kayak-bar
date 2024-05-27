@@ -1,44 +1,39 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-    plugins: [
-        require('@tailwindcss/typography'),
-        require('@tailwindcss/forms'),
-        require('@tailwindcss/aspect-ratio'),
-        require('@tailwindcss/container-queries'),
-    ],
-    theme: {
-        extend: {
-          fontFamily: {
-            'sans': ['Londrina Solid', 'Staatliches', 'Fira Sans', 'sans-serif'],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["Londrina Solid", "Staatliches", "Fira Sans", "sans-serif"],
+      },
+      colors: {
+        surface: {
+          primary: {
+            default: "#F2ECE0",
+            hover: "#F5F0E6",
+            pressed: "#C2BDB3",
           },
-          colors: {
-              surface: {
-                primary: {
-                    default: '#F2ECE0',
-                    hover: '#F5F0E6',
-                    pressed: '#C2BDB3',
-                },
 
-                secondary: {
-                  default: '#684010',
-                },
+          secondary: {
+            default: "#684010",
+          },
 
-                highlight: {
-                  default: "#E2E6B0",
-                  hover: "#D9DE98",
-                  pressed: "#C8CF6A",
-                },
+          highlight: {
+            default: "#E2E6B0",
+            hover: "#D9DE98",
+            pressed: "#C8CF6A",
+          },
 
-                overlay: '#BE5206',
-                badge: '#4D6C40',
-                badge_shadow: '#2B3A06',
-                menukort: '#D9DE98',
-                formular: '#FAF7F3',
-                formular_felter: '#',
-                formular_knap: '#FCE7CF',
-                footer: '#C3E6FF',
-              },
+          overlay: "#BE5206",
+          badge: "#4D6C40",
+          badge_shadow: "#2B3A06",
+          menukort: "#D9DE98",
+          formular: "#FAF7F3",
+          formular_felter: "#",
+          formularknap: "#FCE7CF",
+          footer: "#C3E6FF",
+        },
 
         tekst: {
           primary: {
@@ -112,35 +107,35 @@ module.exports = {
           },
 
           some: {
-            default: '#684010',
-            hover: '#866640',
-            pressed: '#53330D',
+            default: "#684010",
+            hover: "#866640",
+            pressed: "#53330D",
+          },
         },
-      },
-      
+
         shadow: {
           card: {
-            default: '#E2E6B0',
-            hover: '#D9DE98',
-            pressed: '#C8CF6A',
+            default: "#E2E6B0",
+            hover: "#D9DE98",
+            pressed: "#C8CF6A",
           },
-        }, 
+        },
       },
       spacing: {
         mobile: {
           h1_bottom: {
-            index: '1.75rem',
-            other: '3rem',
+            index: "1.75rem",
+            other: "3rem",
           },
-          
-          h2_bottom: '1.25rem',
-          h3_bottom: '1rem',
-          h4_bottom: '0.875rem',
-          gap: '2.25rem',
-          card_bottom: '3rem',
-          button_top: '3rem',
-          button_gap: '1rem',
-          furniture_margin: '6rem',
+
+          h2_bottom: "1.25rem",
+          h3_bottom: "1rem",
+          h4_bottom: "0.875rem",
+          gap: "2.25rem",
+          card_bottom: "3rem",
+          button_top: "3rem",
+          button_gap: "1rem",
+          furniture_margin: "6rem",
         },
 
         desktop: {

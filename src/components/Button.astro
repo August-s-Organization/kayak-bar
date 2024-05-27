@@ -1,19 +1,16 @@
 ---
-const { variant= ["primary"], size = ["medium"]} = Astro.props; 
-const buttonStyling = "rounded-md text-link-default"; 
+const { variant = "primary", size = "medium" } = Astro.props;
+const buttonStyling = "rounded-md text-link-default";
 const variantClasses = {
-
-"primary": "bg-knap-primary-default hover:bg-knap-primary-hover active:bg-knap-primary-pressed",
-"secondary": "bg-knap-secondary-default hover:bg-knap-secondary-hover active:bg-knap-secondary-pressed",
-
+  "primary": "bg-knap-primary-default hover:bg-knap-primary-hover active:bg-knap-primary-pressed",
+  "secondary": "bg-knap-secondary-default hover:bg-knap-secondary-hover active:bg-knap-secondary-pressed",
 };
 const sizeClasses = {
-
-"small": "px-6 py-2 text-xs font-family-staatliches",
-"medium": "px-10 py-4 scale-150 text-lg",
-"large": "px-12 py-8 scale-150 text-lg",
-
+  "small": "px-4 py-2 text-xs font-family-staatliches sm:px-6 sm:py-2 sm:text-sm md:px-8 md:py-3 md:text-base lg:px-10 lg:py-4 lg:text-lg",
+  "medium": "px-10 py-4 text-lg sm:px-14 sm:py-6 sm:text-2xl md:px-16 md:py-8 md:text-2xl lg:px-20 lg:py-8 lg:text-3xl",
+  "large": "px-12 py-6 text-xl sm:px-16 sm:py-10 sm:text-2xl md:px-18 md:py-12 md:text-3xl lg:px-20 lg:py-14 lg:text-3xl",
 };
-
 ---
-    <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot /></button>
+<div class="m-2">
+  <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot /></button>
+</div>

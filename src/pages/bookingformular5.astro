@@ -1,6 +1,40 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Link from "../components/Link.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
-
+<Header></Header>
 <MainLayout title="Book bord på Kayak Bar - Side 5, Bekræft E-mail">
+    <h2 class="text-tekst-primary-default text-6xl lg:text-8xl mb-10 text-center mt-10">Bekræft din booking</h2>
+    <section class="bg-surface-formular mb-10 pb-5">
+         <div class="p-8">
+        <Link variant="primary" size="small" href="/bookingformular4" class="">Tilbage</Link>
+    </div>
+            <div class="grid place-items-center px-5">
+        <img src="ikoneremailmobil.svg" alt="email_mobil" class="block lg:hidden">
+        <img src="ikoneremail.svg" alt="email_desktop" class="hidden lg:block">
+    </div>
+    <img class="py-5 px-8 lg:px-64 lg:py-30" src="line.svg" alt="">
+    <div class="px-4 lg:px-0">
+    <h3 class="text-4xl lg:text-5xl text-tekst-tertiary-default font-semibold text-center pb-10 mb-10">Indtast venligst din email adresse</h3>
+    </div>
+<div class="px-8 w-full  max-w-sm lg:max-w-lg mx-auto mb-16">
+    <form>
+        <div class="mb-4 gap-4">
+            <label for="email" class="block mb-2"></label>
+            <input type="email" id="email" name="email" class="w-full p-3 border border-knap-primary-default rounded-lg placeholder-knap-primary-default text-xl lg:text-2xl" placeholder="Email adresse" disabled>
+        </div>
+    </form>
+</div>    
+<div class="flex justify-center pb-10">
+<Link variant="secondary" size="medium" href="/bookingformular6" class="">Bekræft booking</Link>
+</div>
+</section>
 </MainLayout>
+<Footer></Footer>
+    <style>
+        .placeholder-knap-primary-default::placeholder {
+            color: #EE6607; 
+        }
+    </style>

@@ -1,15 +1,36 @@
 ---
-import '../styles/tailwind.css';
-import 'animate.css';
+import Link from './Link.astro';
 ---
-<header>
+<div x-data="{showmenu: false}" class="font-['Staatliches'] text-tekst-tertiary-default hover:text-tekst-tertiary-hover active:text-tekst-tertiary-pressed">
     <div>
-        <nav>
+        <nav id="desktopmenu" class="mx-20 my-10 hidden lg:block">
             <ul>
-                <li><a href="/">Forside</a></li>
-                <li><a href="/menu">Menu</a></li>
-                <li><a href="/Om">Om Kayak Bar</a></li>
+                <div class="grid place-content-center">
+                    <li><a href="/index"><img src="logo.svg" alt="" class="mb-10"></a></li>
+                </div>
+                <div class="flex place-content-center gap-10">
+                    <li><a href="/menu">MENU</a></li>
+                    <li><a href="">EVENTS</a></li>
+                    <li><a href="">SELSKABER</a></li>
+                    <li><a href="">KAJAK</a></li>
+                    <li><a href="/om">OM OS</a></li>
+                    <li><a href="/bookingformular1"><Link size="small">BOOK BORD</Link></a></li>
+                </div>
             </ul>
         </nav>
     </div>
-</header>
+    <div class="flex items-center justify-center m-6 lg:hidden">
+        <a href="/bookingformular1"><Link size="small">BOOK BORD</Link></a>
+        <a href="/index" class="w-1/3 mx-auto"><img src="logo.svg" alt=""></a>
+        <button id="burgermenu" x-on:click="showmenu = ! showmenu"><img src="aaben.svg" alt=""></button>
+    </div>
+    <nav id="mobilemenu" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false" class="bg-surface-highlight-default my-10">
+        <ul>
+            <li class="text-center py-3"><a href="/menu">MENU</a></li>
+            <li class="text-center py-3"><a href="/">EVENTS</a></li>
+            <li class="text-center py-3"><a href="/">SELSKABER</a></li>
+            <li class="text-center py-3"><a href="/">KAJAK</a></li>
+            <li class="text-center py-3"><a href="/om">OM OS</a></li>
+        </ul>
+    </nav>
+</div>
