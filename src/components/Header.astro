@@ -14,7 +14,7 @@ import Link from './Link.astro';
                     <li><a href="">SELSKABER</a></li>
                     <li><a href="">KAJAK</a></li>
                     <li><a href="/om">OM OS</a></li>
-                    <li><a href="/bookingformular1"><Link>BOOK BORD</Link></a></li>
+                    <li><a href="/bookingformular1"><Link size="small">BOOK BORD</Link></a></li>
                 </div>
             </ul>
         </nav>
@@ -24,14 +24,13 @@ import Link from './Link.astro';
         <a href="/index" class="w-1/3 mx-auto"><img src="logo.svg" alt=""></a>
         <button id="burgermenu" x-on:click="showmenu = ! showmenu"><img src="aaben.svg" alt=""></button>
     </div>
-    <nav id="mobilemenu" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false" class="my-10">
+    <nav id="mobilemenu" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false" class="bg-surface-highlight-default my-10">
         <ul>
-            <li class="text-center py-3"><a href="/menu" class="text-base">MENU</a></li>
-            <li class="text-center py-3"><a href="/om" class="text-base">EVENTS</a></li>
-            <li class="text-center py-3"><a href="/om" class="text-base">SELSKABER</a></li>
-            <li class="text-center py-3"><a href="/om" class="text-base">KAJAK</a></li>
-            <li class="text-center py-3"><a href="/om" class="text-base">OM OS</a></li>
-            <li class="text-center py-3"><a href="/bookingformular1"><Link>BOOK BORD</Link></a></li>
+            <li class="text-center py-3"><a href="/menu">MENU</a></li>
+            <li class="text-center py-3"><a href="/om">EVENTS</a></li>
+            <li class="text-center py-3"><a href="/om">SELSKABER</a></li>
+            <li class="text-center py-3"><a href="/om">KAJAK</a></li>
+            <li class="text-center py-3"><a href="/om">OM OS</a></li>
         </ul>
     </nav>
 </div>
