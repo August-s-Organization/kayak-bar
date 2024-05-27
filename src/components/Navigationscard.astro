@@ -1,8 +1,8 @@
 ---
 ---
-<section x-data="{ allenavigationscards: []}" x-init="allenavigationscards = await (await fetch('navigationscard.json')).json(); allenavigationscards.reverse();" class="mb-10 mt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3">
+<section x-data="{ allenavigationscards: []}" x-init="allenavigationscards = await (await fetch('navigationscard.json')).json(); allenavigationscards.reverse();" class="mb-10 mt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 place-items-center">
   <template x-for="(navigationscard, index) in allenavigationscards.slice(0, 4)" :key="index">
-    <a href="#" class="flex gap-4" :class="index % 2 === 0 ? 'mt-8 lg:mt-16' : ''">
+    <a href="#" class="flex gap-6" :class="index % 2 === 0 ? 'mt-8 lg:mt-16' : ''">
       <article class="bg-card-default hover:bg-card-hover hover:shadow-surface-highlight-hover active:shadow-surface-highlight-pressed rounded-lg overflow-hidden shadow-lg mb-10 min-w-200 w-96 h-[32rem]">
         <img :src="navigationscard.cardbillede" :alt="navigationscard.cardbilledealt" class="object-cover w-full h-56">
         <article class="navigationscard h-auto flex flex-col justify-between px-8 py-6">
