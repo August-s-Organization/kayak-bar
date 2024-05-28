@@ -5,18 +5,17 @@ import MadCard from "../components/MadCard.astro";
 import Link from "../components/Link.astro";
 import DrikkeCard from "../components/DrikkeCard.astro";
 ---
-<Header></Header>
-<article class="mb-20">
-    <div class="relative">
-        <Badge></Badge>
-        <img src="hero-menu.png" alt="">
-        <div class="absolute inset-0 bg-surface-overlay opacity-30"></div>
-        <div class="absolute bottom-0 left-0">
-            <h1 class="text-tekst-secondary-default text-7xl md:text-8xl lg:text-9xl ml-14 md:ml-20 mb-6 md:mb-10">Vores menu</h1>
-        </div>
-    </div>
-</article>
 <MainLayout title="Menu">
+    <article class="mb-20">
+        <div class="relative">
+            <Badge></Badge>
+            <img src="hero-menu.png" alt="">
+            <div class="absolute inset-0 bg-surface-overlay opacity-30"></div>
+            <div class="absolute bottom-0 left-0">
+                <h1 class="text-tekst-secondary-default text-7xl md:text-8xl lg:text-9xl ml-14 md:ml-20 mb-6 md:mb-10">Vores menu</h1>
+            </div>
+        </div>
+    </article>
     <section class="m-20 sm:m-28 md:m-20">
         <article class="lg:mb-40">
             <p class="text-tekst-primary-darker text-base lg:text-lg md:w-3/5 xl:w-1/2 mb-20 md:mb-24">Kayak Bar er et uformelt spisested med aktivitet året rundt og noget for enhver smag, hvad enten det er hverdagsmiddag, teambuilding eller en festlig aften med venner og familie.<br><br>
@@ -52,6 +51,5 @@ import DrikkeCard from "../components/DrikkeCard.astro";
     </article>
     </section>
 </MainLayout>
-<Footer></Footer>
 <script>
 </script>
