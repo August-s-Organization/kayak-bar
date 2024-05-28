@@ -39,7 +39,14 @@ import Link from "../components/Link.astro";
     </section>
      <img class="py-20 px-8 lg:px-64 lg:py-40" src="line.svg" alt="">
     <section id="booking">
-        <article class="">
+        <article class="relative">
+            <div class="absolute inset-0 -z-10 w-screen">
+                <!-- Mobil palmer -->
+                <img class="w-fit object-cover -ml-7 -mt-52 block lg:hidden" src="palmtree_1_mobil.svg" alt="Mobil palmer">
+                <!-- Desktop palmer -->
+                <img class="hidden lg:block md:-ml-56 md:-mt-20" src="palmtrees_1.svg" alt="Desktop palmer">
+            </div>
+            <div class="relative z-10">
             <h2 class="text-tekst-primary-default text-6xl lg:text-8xl mb-3">Vi ses på Kayak Bar!</h2>
             <div class="text-tekst-primary-darker md:w-5/12 lg:w-5/12 lg:pt-10 lg:mb-20">
             <p class="mb-4">Vores unikke lokation, omgivet af fredede historiske omgivelser, tilfører en enestående personlighed, som skal opleves!</p>
@@ -48,6 +55,7 @@ import Link from "../components/Link.astro";
             <p class="mb-12">Book dit bord på Kayak Bar nu!</p>
             </div>
             <Link variant="secondary" size="large" href="/bookingformular1" class="">Book bord!</Link>
+            </div>
         </article>
     </section>
     <img class="py-20 px-8 lg:px-64 lg:py-40" src="line.svg" alt="">
