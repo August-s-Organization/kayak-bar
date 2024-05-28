@@ -93,7 +93,7 @@ import Link from "../components/Link.astro";
 </main>
 </MainLayout>
 <script>
-import { inView } from "motion";
+import {animate, inView } from "motion";
    const logofadein = document.querySelector("#logo");
 	inView(logofadein, () => {
 		logofadein.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0.5s");
