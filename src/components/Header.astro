@@ -21,7 +21,7 @@ import Link from './Link.astro';
     </div>
     <div class="flex items-center justify-center m-6 lg:hidden">
         <Link size="small" href="/bookingformular1">BOOK BORD</Link>
-        <a href="index" class="w-1/3 mx-auto"><img src="logo.svg" alt=""></a>
+        <a href="/" class="w-1/3 mx-auto"><img src="logo.svg" alt=""></a>
         <button id="burgermenu" x-on:click="showmenu = ! showmenu"><img src="aaben.svg" alt=""></button>
     </div>
     <nav id="mobilemenu" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false" class="bg-surface-highlight-default my-10">
