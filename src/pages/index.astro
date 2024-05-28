@@ -2,10 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Navigationscard from "../components/Navigationscard.astro"
 import Link from "../components/Link.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro"
 ---
-<Header></Header>
 <section>
     <article>
             <!-- Mobil version -->
@@ -35,7 +32,7 @@ import Footer from "../components/Footer.astro"
             <p class="mb-4">Som skaberne bag det årlige "Lucia i Kajak" optog, er vi udover dette også værter for en række andre spændende begivenheder.</p>
             <p>Fra koncerter og udstillinger til pladereleases, firmaarrangementer og festlige bryllupper - vi har det hele!</p>
         </div>
-          <Link variant="secondary" size="medium" href="/om" class="">Læs mere om Kayak Bar!</Link>
+          <Link variant="secondary" size="medium" href="/about" class="">Læs mere om Kayak Bar!</Link>
         </article>
         <img src="velkommen_index.png" alt="Stemningen på Kayak Bar" class="billede mt-10 lg:mt-[-30rem] lg:ml-[40rem]">
         </div>
@@ -95,7 +92,6 @@ import Footer from "../components/Footer.astro"
 </div>
 </main>
 </MainLayout>
-<Footer></Footer>
 <script>
 import { inView } from "motion";
    const logofadein = document.querySelector("#logo");
