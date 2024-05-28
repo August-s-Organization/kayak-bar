@@ -19,14 +19,14 @@ import Footer from "../components/Footer.astro";
     </div>
 </article>
 <MainLayout title="Menu">
-    <section class="m-20 sm:m-28 md:m-20">
+    <section class="m-20 sm:m-28 md:m-20" id="cardsection">
         <article class="lg:mb-40">
             <p class="text-tekst-primary-darker text-base lg:text-lg md:w-3/5 xl:w-1/2 mb-20 md:mb-24">Kayak Bar er et uformelt spisested med aktivitet året rundt og noget for enhver smag, hvad enten det er hverdagsmiddag, teambuilding eller en festlig aften med venner og familie.<br><br>
                 Vores menu inkluderer alt fra Moules Frites til skaldyrs- og kødretter, vegetariske valgmuligheder og lækre desserter.<br><br>
                 Dyk ned i vores menu og drinkskort nedenfor!</p>
-                <div class="grid place-items-center md:grid-cols-2 gap-20 mb-32 md:mb-44">
-                    <a href="#mad" class="place-self-start md:place-self-end"><MadCard></MadCard></a>
-                    <a href="#drikke" class="place-self-end md:place-self-start"><DrikkeCard></DrikkeCard></a>
+                <div class="grid place-items-center md:grid-cols-2 gap-20 mb-32 md:mb-44 cardelementerinview" id="kortcards">
+                    <a href="#mad" class="place-self-start md:place-self-end cardelement1"><MadCard></MadCard></a>
+                    <a href="#drikke" class="place-self-end md:place-self-start cardelement2"><DrikkeCard></DrikkeCard></a>
                 </div>
                 <img src="line.svg" alt="" class="lg:mx-32">
         </article>
@@ -56,4 +56,20 @@ import Footer from "../components/Footer.astro";
 </MainLayout>
 <Footer></Footer>
 <script>
+    import {animate, inView} from "motion";
+
+    const cardsectionind = document.querySelector("#cardsection");
+
+    inView(cardsectionind, () => {
+        cardsectionind.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0.5s");
+    });
+
+    inView( ".cardelementerinview", () =>{
+	animate( ".cardelement1", { x: [-2000, 0 ] }, { duration: 2 }) 
+	animate( ".cardelement2", { x: [-1500, 0 ] }, { duration: 2 })
+    return () => {
+        animate( ".cardelement1", { x: [-2000, 0 ] }, { duration: 2 }) 
+		animate( ".cardelement2", { x: [-1500, 0 ] }, { duration: 2 })
+    }
+    });
 </script>
