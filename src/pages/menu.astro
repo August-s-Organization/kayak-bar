@@ -1,39 +1,36 @@
 ---
-import Header from "../components/Header.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Badge from "../components/Badge.astro";
 import MadCard from "../components/MadCard.astro";
 import Link from "../components/Link.astro";
 import DrikkeCard from "../components/DrikkeCard.astro";
-import Footer from "../components/Footer.astro";
 ---
-<Header></Header>
-<article class="mb-20">
-    <div class="relative">
-        <Badge></Badge>
-        <img src="hero-menu.png" alt="">
-        <div class="absolute inset-0 bg-surface-overlay opacity-30"></div>
-        <div class="absolute bottom-0 left-0">
-            <h1 class="text-tekst-secondary-default text-7xl md:text-8xl lg:text-9xl ml-14 md:ml-20 mb-6 md:mb-10">Vores menu</h1>
-        </div>
-    </div>
-</article>
 <MainLayout title="Menu">
+    <article class="mb-20">
+        <div class="relative">
+            <Badge></Badge>
+            <img src="hero-menu.png" alt="">
+            <div class="absolute inset-0 bg-surface-overlay opacity-30"></div>
+            <div class="absolute bottom-0 left-0">
+                <h1 class="text-tekst-secondary-default text-7xl md:text-8xl lg:text-9xl ml-14 md:ml-20 mb-6 md:mb-10">Vores menu</h1>
+            </div>
+        </div>
+    </article>
     <section class="m-20 sm:m-28 md:m-20">
         <article class="lg:mb-40">
             <p class="text-tekst-primary-darker text-base lg:text-lg md:w-3/5 xl:w-1/2 mb-20 md:mb-24">Kayak Bar er et uformelt spisested med aktivitet året rundt og noget for enhver smag, hvad enten det er hverdagsmiddag, teambuilding eller en festlig aften med venner og familie.<br><br>
                 Vores menu inkluderer alt fra Moules Frites til skaldyrs- og kødretter, vegetariske valgmuligheder og lækre desserter.<br><br>
                 Dyk ned i vores menu og drinkskort nedenfor!</p>
-                <div class="grid place-items-center md:grid-cols-2 gap-20 mb-32 md:mb-44">
-                    <a href="#mad" class="place-self-start md:place-self-end"><MadCard></MadCard></a>
-                    <a href="#drikke" class="place-self-end md:place-self-start"><DrikkeCard></DrikkeCard></a>
+                <div class="grid place-items-center md:grid-cols-2 gap-20 mb-32 md:mb-44 cardelementerinview" id="kortcards">
+                    <a href="#mad" class="place-self-start md:place-self-end cardelement1"><MadCard></MadCard></a>
+                    <a href="#drikke" class="place-self-end md:place-self-start cardelement2"><DrikkeCard></DrikkeCard></a>
                 </div>
                 <img src="line.svg" alt="" class="lg:mx-32">
         </article>
     </section>
     <section class="m-20 sm:m-28 lg:m-40">
-        <article class="grid lg:grid-cols-2 gap-28 place-items-start mb-20 md:mb-28" id="mad">
-                <div>
+        <article class="grid lg:grid-cols-2 gap-28 place-items-start mb-20 md:mb-28 madparallaxcontainer" id="mad">
+                <div class="mad">
                     <h2 class="text-tekst-primary-default text-6xl md:text-7xl lg:text-8xl mb-6">Mad</h2>
                     <p class="text-tekst-primary-darker text-base lg:text-lg mb-12">Maden på Kayak Bar byder på nøje udvalgte retter, lige fra friskfanget fisk og skaldyr til saftige bøffer og vegetariske delikatesser.<br><br>
                         Vi stræber efter at give vores gæster en kulinarisk oplevelse, hvor smag, kvalitet og kreativitet går hånd i hånd.<br><br>
@@ -42,8 +39,8 @@ import Footer from "../components/Footer.astro";
                 </div>
                 <img src="madkort.svg" alt="">
         </article>
-        <article class="grid lg:grid-cols-2 gap-28 place-items-start" id="drikke">
-            <div>
+        <article class="grid lg:grid-cols-2 gap-28 place-items-start drikkeparallaxcontainer" id="drikke">
+            <div class="drikke">
                 <h2 class="text-tekst-primary-default text-6xl md:text-7xl lg:text-8xl mb-6">Drikke</h2>
                 <p class="text-tekst-primary-darker text-base lg:text-lg mb-12">Vores bartendere har sammensat en række kreative cocktails, både klassiske og moderne, lavet med friske ingredienser og hjemmelavede sirupper.<br><br>
                     Derudover tilbyder vi et udvalg af lokale og internationale øl, nøje udvalgte vine samt kvalitetsspiritus.<br><br>
@@ -54,6 +51,32 @@ import Footer from "../components/Footer.astro";
     </article>
     </section>
 </MainLayout>
-<Footer></Footer>
 <script>
+    import {animate, inView} from "motion";
+
+    const cardsectionind = document.querySelector("#cardsection");
+
+    inView(cardsectionind, () => {
+        cardsectionind.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0.5s");
+    });
+
+    inView( ".cardelementerinview", () =>{
+	animate( ".cardelement1", { x: [-2000, 0 ] }, { duration: 2 }) 
+	animate( ".cardelement2", { x: [-1500, 0 ] }, { duration: 2 })
+    return () => {
+        animate( ".cardelement1", { x: [-2000, 0 ] }, { duration: 2 }) 
+		animate( ".cardelement2", { x: [-1500, 0 ] }, { duration: 2 })
+    }
+    });
+    
+    document.querySelectorAll(".madparallaxcontainer").forEach(( parallaxcontainer ) => {
+        const madparallax = parallaxcontainer.querySelector(".mad");
+        scroll(animate(madparallax, { y: [ 250, 700] }), { target: madparallax });
+        });
+
+        document.querySelectorAll(".drikkeparallaxcontainer").forEach(( parallaxcontainer ) => {
+        const drikkeparallax = parallaxcontainer.querySelector(".drikke");
+        scroll(animate(drikkeparallax, { y: [ 200, 700] }), { target: drikkeparallax });
+        });
+
 </script>
