@@ -28,21 +28,21 @@ import DrikkeCard from "../components/DrikkeCard.astro";
                 <img src="line.svg" alt="" class="lg:mx-32">
         </article>
     </section>
-    <section class="m-20 sm:m-28 lg:m-40">
-        <article class="grid lg:grid-cols-2 gap-28 place-items-start mb-20 md:mb-28 parallaxcontainer" id="mad">
-                <div class="mad">
+    <section class="m-20 sm:m-28 lg:m-40 parallaxcontainermedflereelementer">
+        <article class="grid lg:grid-cols-2 gap-28 place-items-start mb-20 md:mb-28" id="mad">
+                <div class="menuelement">
                     <h2 class="text-tekst-primary-default text-6xl md:text-7xl lg:text-8xl mb-6">Mad</h2>
-                    <p class="text-tekst-primary-darker text-base lg:text-lg mb-12">Maden på Kayak Bar byder på nøje udvalgte retter, lige fra friskfanget fisk og skaldyr til saftige bøffer og vegetariske delikatesser.<br><br>
+                    <p class="text-tekst-primary-darker text-base lg:text-lg mb-16">Maden på Kayak Bar byder på nøje udvalgte retter, lige fra friskfanget fisk og skaldyr til saftige bøffer og vegetariske delikatesser.<br><br>
                         Vi stræber efter at give vores gæster en kulinarisk oplevelse, hvor smag, kvalitet og kreativitet går hånd i hånd.<br><br>
                         Hver ret er nøje sammensat for at levere en gastronomisk rejse, der komplementerer vores maleriske atmosfære ved vandet!</p>
                         <Link>Book bord</Link>
                 </div>
                 <img src="madkort.svg" alt="">
         </article>
-        <article class="grid lg:grid-cols-2 gap-28 place-items-start parallaxcontainer" id="drikke">
-            <div class="drikke">
+        <article class="grid lg:grid-cols-2 gap-28 place-items-start" id="drikke">
+            <div class="menuelement2">
                 <h2 class="text-tekst-primary-default text-6xl md:text-7xl lg:text-8xl mb-6">Drikke</h2>
-                <p class="text-tekst-primary-darker text-base lg:text-lg mb-12">Vores bartendere har sammensat en række kreative cocktails, både klassiske og moderne, lavet med friske ingredienser og hjemmelavede sirupper.<br><br>
+                <p class="text-tekst-primary-darker text-base lg:text-lg mb-16">Vores bartendere har sammensat en række kreative cocktails, både klassiske og moderne, lavet med friske ingredienser og hjemmelavede sirupper.<br><br>
                     Derudover tilbyder vi et udvalg af lokale og internationale øl, nøje udvalgte vine samt kvalitetsspiritus.<br><br>
                     Så uanset om du er til en forfriskende, eksotisk drink efter en tur på kanalen eller en elegant cocktail til at kickstarte aftenen, har vi noget for enhver smag!</p>
                     <Link>Book bord</Link>
@@ -52,7 +52,7 @@ import DrikkeCard from "../components/DrikkeCard.astro";
     </section>
 </MainLayout>
 <script>
-    import {animate, inView, scroll}, from "motion";
+    import {animate, inView, scroll} from "motion";
 
     const cardsectionind = document.querySelector("#cardsection");
 
@@ -69,17 +69,17 @@ import DrikkeCard from "../components/DrikkeCard.astro";
     }
     });
     
-    document.querySelectorAll(".parallaxcontainer").forEach(( parallaxcontainer ) => {
-        const elementderskalparallaxes = parallaxcontainer.querySelector(".mad");
-        scroll(animate(elementderskalparallaxes, { y: [ 250, 700] }), {
-            target: elementderskalparallaxes
+    document.querySelectorAll(".parallaxcontainermedflereelementer").forEach(( parallaxcontainer ) => {
+        const elementderskalparallaxes2 = parallaxcontainer.querySelector(".menuelement");
+        scroll(animate(elementderskalparallaxes2, { y: [ 250, 700] }), {
+            target: elementderskalparallaxes2
         });
     });
 
-        document.querySelectorAll(".parallaxcontainer").forEach(( parallaxcontainer ) => {
-        const elementderskalparallaxes = parallaxcontainer.querySelector(".drikke");
-        scroll(animate(elementderskalparallaxes, { y: [ 200, 700] }), {
-            target: elementderskalparallaxes
+        document.querySelectorAll(".parallaxcontainermedflereelementer").forEach(( parallaxcontainer ) => {
+        const elementderskalparallaxes2 = parallaxcontainer.querySelector(".menuelement2");
+        scroll(animate(elementderskalparallaxes2, { y: [ 200, 700] }), {
+            target: elementderskalparallaxes2
         });
     });
 
