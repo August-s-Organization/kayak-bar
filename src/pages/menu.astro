@@ -6,16 +6,18 @@ import Link from "../components/Link.astro";
 import DrikkeCard from "../components/DrikkeCard.astro";
 ---
 <MainLayout title="Menu">
-    <article class="mb-20">
-        <div class="relative">
-            <Badge></Badge>
-            <img src="hero-menu.png" alt="">
-            <div class="absolute inset-0 bg-surface-overlay opacity-30"></div>
-            <div class="absolute bottom-0 left-0">
-                <h1 class="text-tekst-secondary-default text-7xl md:text-8xl lg:text-9xl ml-14 md:ml-20 mb-6 md:mb-10">Vores menu</h1>
+    <section>
+        <article class="mb-20">
+            <div class="relative">
+                <Badge></Badge>
+                <img src="hero-menu.png" alt="">
+                <div class="absolute inset-0 bg-surface-overlay opacity-30"></div>
+                <div class="absolute bottom-0 left-0">
+                    <h1 class="text-tekst-secondary-default text-7xl md:text-8xl lg:text-9xl ml-14 md:ml-20 mb-6 md:mb-10">Vores menu</h1>
+                </div>
             </div>
-        </div>
-    </article>
+        </article>
+    </section>
     <section class="m-20 sm:m-28 md:m-20">
         <article class="lg:mb-40">
             <p class="text-tekst-primary-darker text-base lg:text-lg md:w-3/5 xl:w-1/2 mb-20 md:mb-24">Kayak Bar er et uformelt spisested med aktivitet året rundt og noget for enhver smag, hvad enten det er hverdagsmiddag, teambuilding eller en festlig aften med venner og familie.<br><br>
@@ -29,22 +31,30 @@ import DrikkeCard from "../components/DrikkeCard.astro";
         </article>
     </section>
     <section class="m-20 sm:m-28 lg:m-40 parallaxcontainermedflereelementer">
+        <div class="relative">
+            <div class="absolute inset-0 -z-10 w-screen">
+                <!-- Mobil palmer -->
+                <img class="w-fit object-cover -ml-7 -mt-52 block md:hidden" src="palmtree_1_mobil.svg" alt="">
+                <!-- Desktop palmer -->
+                <img class="hidden lg:block md:-ml-40 md:-mt-32" src="palmtrees_1.svg" alt="">
+            </div>
+        </div>
         <article class="grid lg:grid-cols-2 gap-28 place-items-start mb-20 md:mb-28" id="mad">
-                <div class="menuelement mb-56">
-                    <h2 class="text-tekst-primary-default text-6xl md:text-7xl lg:text-8xl mb-2">Mad</h2>
-                    <p class="text-tekst-primary-darker text-base lg:text-lg mb-16">Maden på Kayak Bar byder på nøje udvalgte retter, lige fra friskfanget fisk og skaldyr til saftige bøffer og vegetariske delikatesser.<br><br>
-                        Vi stræber efter at give vores gæster en kulinarisk oplevelse, hvor smag, kvalitet og kreativitet går hånd i hånd.<br><br>
-                        Hver ret er nøje sammensat for at levere en gastronomisk rejse, der komplementerer vores maleriske atmosfære ved vandet!</p>
-                        <Link>Book bord</Link>
+            <div class="menuelement mb-56">
+                <h2 class="text-tekst-primary-default text-6xl md:text-7xl lg:text-8xl mb-2">Mad</h2>
+                <p class="text-tekst-primary-darker text-base lg:text-lg mb-16">Maden på Kayak Bar byder på nøje udvalgte retter, lige fra friskfanget fisk og skaldyr til saftige bøffer og vegetariske delikatesser.<br><br>
+                    Vi stræber efter at give vores gæster en kulinarisk oplevelse, hvor smag, kvalitet og kreativitet går hånd i hånd.<br><br>
+                    Hver ret er nøje sammensat for at levere en gastronomisk rejse, der komplementerer vores maleriske atmosfære ved vandet!</p>
+                    <Link>Book bord</Link>
                 </div>
                 <img src="madkort.svg" alt="">
         </article>
         <div class="relative">
             <div class="absolute inset-0 -z-10 w-screen">
                 <!-- Mobil palmer -->
-                <img class="w-fit object-cover -ml-7 -mt-52 block md:hidden" src="palmtree_1_mobil.svg" alt="">
+                <img class="w-fit object-cover -ml-7 -mt-52 block md:hidden" src="palmtree_2_mobil.svg" alt="">
                 <!-- Desktop palmer -->
-                                <img class="hidden lg:block md:-ml-40 md:-mt-32" src="palmtrees_1.svg" alt="">
+                <img class="hidden lg:block md:-ml-40 md:-mt-32" src="palmtrees_3.svg" alt="">
             </div>
         </div>
         <article class="grid lg:grid-cols-2 gap-28 place-items-start" id="drikke">
@@ -54,9 +64,9 @@ import DrikkeCard from "../components/DrikkeCard.astro";
                     Derudover tilbyder vi et udvalg af lokale og internationale øl, nøje udvalgte vine samt kvalitetsspiritus.<br><br>
                     Så uanset om du er til en forfriskende, eksotisk drink efter en tur på kanalen eller en elegant cocktail til at kickstarte aftenen, har vi noget for enhver smag!</p>
                     <Link>Book bord</Link>
-            </div>
-            <img src="drinkskort.svg" alt="">
-    </article>
+                </div>
+                <img src="drinkskort.svg" alt="">
+        </article>
     </section>
 </MainLayout>
 <script>
