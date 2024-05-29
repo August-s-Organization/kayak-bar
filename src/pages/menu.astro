@@ -10,19 +10,15 @@ import DrikkeCard from "../components/DrikkeCard.astro";
         <article class="mb-20">
             <div class="relative">
                 <Badge></Badge>
-
-                <div class="h-full md:h-[29rem] overflow-hidden">
-                    <img src="hero-menu.png" alt="">
+                    <img src="/hero-menu-md.png" alt="">
                     <div class="absolute inset-0 bg-surface-overlay opacity-30"></div>
                     <div class="absolute bottom-0 left-0">
-                        <h1 class="text-tekst-secondary-default text-7xl md:text-8xl lg:text-9xl ml-14 md:ml-20 mb-6 md:mb-10">Vores menu</h1>
+                        <h1 class="text-tekst-secondary-default text-6xl md:text-7xl lg:text-8xl ml-12 md:ml-20 mb-4 md:mb-8">Vores menu</h1>
                     </div>
-                </div>
-
             </div>
         </article>
     </section>
-    <section class="m-20 sm:m-28 md:m-20">
+    <section class="mx-20 sm:mx-28 md:mx-20 -my-14">
         <article class="lg:mb-40">
             <p class="text-tekst-primary-darker text-base lg:text-lg md:w-3/5 xl:w-1/2 mb-20 md:mb-24">Kayak Bar er et uformelt spisested med aktivitet året rundt og noget for enhver smag, hvad enten det er hverdagsmiddag, teambuilding eller en festlig aften med venner og familie.<br><br>
                 Vores menu inkluderer alt fra Moules Frites til skaldyrs- og kødretter, vegetariske valgmuligheder og lækre desserter.<br><br>
@@ -31,16 +27,16 @@ import DrikkeCard from "../components/DrikkeCard.astro";
                     <a href="#mad" class="place-self-start md:place-self-end cardelement1"><MadCard></MadCard></a>
                     <a href="#drikke" class="place-self-end md:place-self-start cardelement2"><DrikkeCard></DrikkeCard></a>
                 </div>
-                <img src="line.svg" alt="" class="lg:mx-32">
+                <img src="/line.svg" alt="" class="lg:mx-32">
         </article>
     </section>
     <section class="m-20 sm:m-28 lg:m-40 parallaxcontainermedflereelementer">
         <div class="relative">
             <div class="absolute inset-0 -z-10 w-screen">
                 <!-- Mobil palmer -->
-                <img class="w-fit object-cover -ml-7 -mt-52 block md:hidden" src="palmtree_1_mobil.svg" alt="">
+                <img class="w-fit object-cover -ml-7 -mt-52 block md:hidden" src="/palmtree_1_mobil.svg" alt="">
                 <!-- Desktop palmer -->
-                <img class="hidden lg:block md:-ml-40 md:-mt-32" src="palmtrees_1.svg" alt="">
+                <img class="hidden lg:block md:-ml-40 md:-mt-32" src="/palmtrees_1.svg" alt="">
             </div>
         </div>
         <article class="grid lg:grid-cols-2 gap-28 place-items-start mb-20 md:mb-28" id="mad">
@@ -51,14 +47,14 @@ import DrikkeCard from "../components/DrikkeCard.astro";
                     Hver ret er nøje sammensat for at levere en gastronomisk rejse, der komplementerer vores maleriske atmosfære ved vandet!</p>
                     <Link>Book bord</Link>
                 </div>
-                <img src="madkort.svg" alt="">
+                <img src="/madkort.svg" alt="">
         </article>
         <div class="relative">
             <div class="absolute inset-0 -z-10 w-screen">
                 <!-- Mobil palmer -->
-                <img class="w-fit object-cover -ml-7 -mt-52 block md:hidden" src="palmtree_2_mobil.svg" alt="">
+                <img class="w-fit object-cover -ml-7 -mt-52 block md:hidden" src="/palmtree_2_mobil.svg" alt="">
                 <!-- Desktop palmer -->
-                <img class="hidden lg:block md:-ml-40 md:-mt-32" src="palmtrees_3.svg" alt="">
+                <img class="hidden lg:block md:-ml-40 md:-mt-32" src="/palmtrees_3.svg" alt="">
             </div>
         </div>
         <article class="grid lg:grid-cols-2 gap-28 place-items-start" id="drikke">
@@ -69,7 +65,7 @@ import DrikkeCard from "../components/DrikkeCard.astro";
                     Så uanset om du er til en forfriskende, eksotisk drink efter en tur på kanalen eller en elegant cocktail til at kickstarte aftenen, har vi noget for enhver smag!</p>
                     <Link>Book bord</Link>
                 </div>
-                <img src="drinkskort.svg" alt="">
+                <img src="/drinkskort.svg" alt="">
         </article>
     </section>
 </MainLayout>

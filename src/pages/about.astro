@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import  Naturalform from "../components/Naturalform.astro";
+import Naturalform from "../components/Naturalform.astro";
 ---
 <MainLayout title="Kayak Bar">
     <main class="">
@@ -109,7 +109,7 @@ import  Naturalform from "../components/Naturalform.astro";
 </style>
 
 <script>
-        import {animate, stagger, inView, scroll, timeline} from "motion";
+        import {animate, inView, scroll} from "motion";
 
    const sektion1fadein = document.querySelector("#sektion1");
 	inView(sektion1fadein, () => {

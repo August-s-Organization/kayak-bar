@@ -44,8 +44,8 @@ module.exports = {
           },
 
           secondary: {
-            default: "#F7F4EC",
-            darker: "#F2ECE0",
+            default: "#FCFBF9",
+            darker: "#F7F4EC",
           },
 
           tertiary: {
@@ -73,7 +73,7 @@ module.exports = {
         card: {
           default: "#FCFBF9",
           hover: "#E2E6B0",
-          pressed: "#F7F4EC",
+          pressed: "#FAF7F3",
         },
 
         knap: {
