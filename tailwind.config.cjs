@@ -154,6 +154,9 @@ module.exports = {
           furniture_margin: "11rem",
         },
       },
+      scale: {
+        '200': '2',
+      },
     },
   },
 };
